@@ -1,0 +1,39 @@
+body{
+    font-family: Arial;
+    background-color: white;
+}
+#tituloprincipal, #login{
+    width: fit-content;
+}
+#nav{
+    align-items: center;
+    display: flex;
+}
+#tituloprincipal{
+    margin-left: 48%;
+}
+#login{
+    margin-left: 38%;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: white;
+}
+.tenis{
+    border: 2px solid black;
+    background-color: beige;
+    width: 400px;
+}
+
+.catalogofotos {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+}
+
+
+.catalogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
