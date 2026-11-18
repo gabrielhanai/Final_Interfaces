@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Nike Shoes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div id="nav">
+            <h1 id="tituloprincipal">Nike shoes</h1>
+            <button id="mudartema">Mudar Tema</button>
+            <a href="index.html"><button id="login">Voltar</button></a>
+        </div>
+        <hr>
+
+        <div class="login-container">
+            <form class="login-box" action="index.html">
+                <h2>Entrar na Conta</h2>
+                
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha" required>
+                </div>
+
+                <button type="submit" id="btn-entrar">Entrar</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

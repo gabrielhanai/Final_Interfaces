@@ -12,12 +12,15 @@ body{
 #tituloprincipal{
     margin-left: 48%;
 }
-#login{
-    margin-left: 38%;
+button{
     width: 80px;
     height: 40px;
     border-radius: 5px;
     background-color: white;
+    margin-left: 10px;
+}
+#mudartema{
+    margin-left: 650px;
 }
 .tenis {
     border: 2px solid black;
@@ -39,7 +42,7 @@ body{
 .tenis img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* ou object-fit: cover; */
+    object-fit: contain;
 }
 .preco{
     border: 2px solid black;
@@ -48,4 +51,93 @@ body{
     text-align: center;
     line-height: 30px;
     background-color: hsl(60, 56%, 85%);
+}
+body {
+    font-family: Arial;
+    background-color: white;
+    color: black;
+}
+
+
+.preco {
+    border: 2px solid black;
+    height: 30px;
+    width: 400px;
+    text-align: center;
+    line-height: 30px;
+    background-color: hsl(60, 56%, 85%);
+    color: black; 
+}
+
+body.dark {
+    background-color: hsl(0, 0%, 10%);
+    color: white;
+}
+
+body.dark .tenis,
+body.dark .preco {
+    border-color: white;
+}
+
+body.dark .preco {
+    color: black;
+}
+
+/* --- Página de Login --- */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+
+.login-box {
+    border: 2px solid black;
+    background-color: hsl(60, 56%, 85%);
+    color: black;
+    padding: 30px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-group input {
+    height: 35px;
+    padding: 0 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#btn-entrar {
+    width: 100%;
+    height: 40px;
+    margin-left: 0;
+    margin-top: 10px;
+    border: 2px solid black;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btn-entrar:hover {
+    background-color: black;
+    color: white;
+}
+
+body.dark .login-box {
+    border-color: white;
+    color: black;
 }
