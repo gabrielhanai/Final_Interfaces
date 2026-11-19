@@ -1,50 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Catálogo | Nike shoes</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <div id="nav">
-            <h1 id="tituloprincipal">Nike shoes</h1>
-            <button id="mudartema">Mudar Tema</button>
-            <a href="login.html"><button id="login">Login</button></a>
-        </div>
-        <hr>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
 
+    <header>
+        <nav id="nav" aria-label="Principal">
+            <p id="tituloprincipal">Nike shoes</p>
+            <div class="acoes">
+                <button type="button" id="mudartema" aria-pressed="false">Mudar tema</button>
+                <a href="login.html" class="btn" id="login">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="conteudo">
         <h1>Catálogo</h1>
-        <div class="catalogofotos">
-            <div class="catalogo">
-                <img src="assets/nikered.png" class="tenis">
-                <p class="preco">R$1499,99</p>
-            </div>
-        
-            <div class="catalogo">
-                <img src="assets/nikeroxo.png" class="tenis">
-                <p class="preco">R$1499,99</p>
-            </div>
 
-            <div class="catalogo">
-                <img src="assets/nikelaranja.png" class="tenis">
-                <p class="preco">R$1499,99</p>
-            </div>
-
-            <div class="catalogo">
-                <img src="assets/nikefeminino.png" class="tenis">
-                <p class="preco">R$1499,99</p>
-            </div>
-        </div>
+        <ul class="catalogofotos">
+            <li class="catalogo">
+                <img src="assets/nikered.png" class="tenis" alt="Tênis Nike vermelho">
+                <p class="preco">R$ 1.499,99</p>
+            </li>
+            <li class="catalogo">
+                <img src="assets/nikeroxo.png" class="tenis" alt="Tênis Nike roxo">
+                <p class="preco">R$ 1.499,99</p>
+            </li>
+            <li class="catalogo">
+                <img src="assets/nikelaranja.png" class="tenis" alt="Tênis Nike laranja">
+                <p class="preco">R$ 1.499,99</p>
+            </li>
+            <li class="catalogo">
+                <img src="assets/nikefeminino.png" class="tenis" alt="Tênis Nike feminino">
+                <p class="preco">R$ 1.499,99</p>
+            </li>
+        </ul>
     </main>
-    <hr>
+
     <footer>
         <h2>Referências de pesquisas</h2>
-        <p>https://www.netshoes.com.br/</p> 
-        <p>https://www.centauro.com.br/</p> 
+        <ul>
+            <li><a href="https://www.netshoes.com.br/">Netshoes</a></li>
+            <li><a href="https://www.centauro.com.br/">Centauro</a></li>
+        </ul>
         <p>Claude para tirar algumas dúvidas apenas e não para realizar todo o trabalho</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
