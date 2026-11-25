@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo | Nike shoes</title>
+    <title>Catálogo | Nike Shoes</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
 
+    <!-- Cabeçalho -->
     <header>
         <nav id="nav" aria-label="Principal">
-            <p id="tituloprincipal">Nike shoes</p>
+            <p id="tituloprincipal">Nike Shoes</p>
+
+            <div class="links-nav">
+                <a href="#destaques">Destaques</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#sobre">Sobre nós</a>
+            </div>
+
             <div class="acoes">
                 <button type="button" id="mudartema" aria-pressed="false">Mudar tema</button>
                 <a href="login.html" class="btn" id="login">Login</a>
@@ -19,34 +27,113 @@
         </nav>
     </header>
 
+    <!-- Conteúdo Principal -->
     <main id="conteudo">
-        <h1>Catálogo</h1>
 
-        <ul class="catalogofotos">
-            <li class="catalogo">
-                <img src="assets/nikered.png" class="tenis" alt="Tênis Nike vermelho">
-                <p class="preco">R$ 1.499,99</p>
-            </li>
-            <li class="catalogo">
-                <img src="assets/nikeroxo.png" class="tenis" alt="Tênis Nike roxo">
-                <p class="preco">R$ 1.499,99</p>
-            </li>
-            <li class="catalogo">
-                <img src="assets/nikelaranja.png" class="tenis" alt="Tênis Nike laranja">
-                <p class="preco">R$ 1.499,99</p>
-            </li>
-            <li class="catalogo">
-                <img src="assets/nikefeminino.png" class="tenis" alt="Tênis Nike feminino">
-                <p class="preco">R$ 1.499,99</p>
-            </li>
-        </ul>
+        <!-- Seção 1: Carrossel de Destaques -->
+        <section id="destaques" class="secao" aria-label="Carrossel de produtos em destaque">
+            <h1>Destaques da Semana</h1>
+
+            <div class="carrossel">
+                <button type="button" class="carrossel-btn" id="btn-anterior" aria-label="Produto anterior">
+                    &#10094;
+                </button>
+
+                <button type="button" class="carrossel-conteudo" id="carrossel-card" aria-label="Ver detalhes do tênis em destaque">
+                    <img id="carrossel-img" src="assets/nikered.png" alt="Tênis Nike vermelho">
+                    <div class="carrossel-info">
+                        <h2 id="carrossel-nome">Nike Air Red Edition</h2>
+                        <p id="carrossel-preco" class="preco-destaque">R$ 1.499,99</p>
+                        <span class="aviso-clique">Clique para ver detalhes</span>
+                    </div>
+                </button>
+
+                <button type="button" class="carrossel-btn" id="btn-proximo" aria-label="Próximo produto">
+                    &#10095;
+                </button>
+            </div>
+
+            <div class="carrossel-indicadores" id="carrossel-indicadores" role="tablist" aria-label="Selecionar destaque">
+                <!-- Preenchido automaticamente pelo script.js -->
+            </div>
+        </section>
+
+        <!-- Seção 2: Catálogo Completo -->
+        <section id="catalogo" class="secao">
+            <h2>Catálogo</h2>
+
+            <ul class="catalogofotos">
+                <li class="catalogo">
+                    <button type="button" class="produto-card" data-produto="0">
+                        <img src="assets/nikered.png" class="tenis" alt="Tênis Nike vermelho">
+                        <span class="nome-produto">Nike Air Red Edition</span>
+                        <span class="preco">R$ 1.499,99</span>
+                    </button>
+                </li>
+                <li class="catalogo">
+                    <button type="button" class="produto-card" data-produto="1">
+                        <img src="assets/nikeroxo.png" class="tenis" alt="Tênis Nike roxo">
+                        <span class="nome-produto">Nike Purple Court</span>
+                        <span class="preco">R$ 1.499,99</span>
+                    </button>
+                </li>
+                <li class="catalogo">
+                    <button type="button" class="produto-card" data-produto="2">
+                        <img src="assets/nikelaranja.png" class="tenis" alt="Tênis Nike laranja">
+                        <span class="nome-produto">Nike Orange Blaze</span>
+                        <span class="preco">R$ 1.499,99</span>
+                    </button>
+                </li>
+                <li class="catalogo">
+                    <button type="button" class="produto-card" data-produto="3">
+                        <img src="assets/nikefeminino.png" class="tenis" alt="Tênis Nike feminino">
+                        <span class="nome-produto">Nike Soft Rose Feminino</span>
+                        <span class="preco">R$ 1.499,99</span>
+                    </button>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Seção 3: Sobre Nós -->
+        <section id="sobre" class="secao sobre-nos">
+            <h2>Sobre nós</h2>
+            <p>
+                A <strong>Nike Shoes</strong> nasceu da paixão por tênis e da vontade de dar uma nova vida a modelos
+                especiais. Somos uma loja independente focada em <strong>revenda e curadoria de desapegos</strong>,
+                reunindo pares bem conservados, edições difíceis de encontrar e clássicos que merecem voltar às ruas.
+            </p>
+            <p>
+                Nosso estoque está sempre mudando: sempre que aparece algum desapego, coleção pessoal ou achado especial,
+                ele é revisado, fotografado e postado aqui no catálogo. Como muitas peças são únicas, vale acompanhar
+                nossa vitrine com frequência para não perder o próximo par.
+            </p>
+        </section>
+
     </main>
 
+    <!-- Modal de Detalhes do Produto -->
+    <dialog id="modal-produto" class="modal-produto" aria-labelledby="modal-titulo">
+        <div class="modal-conteudo">
+            <img id="modal-img" src="" alt="">
+            <div class="modal-texto">
+                <h2 id="modal-titulo"></h2>
+                <p id="modal-condicao" class="modal-condicao"></p>
+                <p id="modal-descricao"></p>
+                <p id="modal-preco" class="preco-destaque"></p>
+                <div class="modal-acoes">
+                    <a href="login.html" class="btn">Entrar para reservar</a>
+                    <button type="button" id="fechar-modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Rodapé -->
     <footer>
         <h2>Referências de pesquisas</h2>
         <ul>
-            <li><a href="https://www.netshoes.com.br/">Netshoes</a></li>
-            <li><a href="https://www.centauro.com.br/">Centauro</a></li>
+            <li><a href="https://www.netshoes.com.br/" target="_blank" rel="noopener noreferrer">Netshoes</a></li>
+            <li><a href="https://www.centauro.com.br/" target="_blank" rel="noopener noreferrer">Centauro</a></li>
         </ul>
         <p>Claude para tirar algumas dúvidas apenas e não para realizar todo o trabalho</p>
     </footer>
